@@ -140,6 +140,7 @@ will be replaced with a `_`.
   api_tls:
       ca_file: "/etc/opt/certs/ca.pem"
   ```
+- `drop_histogram_buckets`:  (default = `false`) if this set to true then histogram buckets will not be translated and propagated into Sfx data points.  
 
 In addition, this exporter offers queued retry which is enabled by default.
 Information about queued retry configuration parameters can be found
