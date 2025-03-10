@@ -281,7 +281,6 @@ func (se *sumologicexporter) getHTTPClient() *http.Client {
 
 func (se *sumologicexporter) setDataURLs(logs, metrics, traces string) {
 	se.dataURLsLock.Lock()
-	se.logger.Info("setting data urls", zap.String("logs_url", logs), zap.String("metrics_url", metrics), zap.String("traces_url", traces))
 	se.dataURLLogs, se.dataURLMetrics, se.dataURLTraces = logs, metrics, traces
 	se.dataURLsLock.Unlock()
 }
